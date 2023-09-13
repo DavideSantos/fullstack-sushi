@@ -7,3 +7,7 @@ from .models import Roll
 def rolls(request):
     rolls = Roll.objects.all()
     return render(request, 'rolls/sushi-rolls.html', {'rolls': rolls})
+
+
+def contactUs(request):
+    return render(request, 'rolls/contact-us.html')

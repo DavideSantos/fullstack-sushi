@@ -31,33 +31,26 @@
         </a>
       </div>
     </nav>
-    <div class="container my-5 text-center" style="max-width: 580px">
-      <h1>Sushi per Programmatori!</h1>
-      <p class="lead">
-        Concediti ora una favolosa pausa ricca di sapore e di carboidrati. E'
-        scientificamente provato: i nostri sushi rolls ti aiutano a scrivere un
-        codice più performante
-      </p>
-      <button type="button" class="btn btn-primary">Ordina Subito!</button>
-      <a href="{% url 'contattaci'%}" type="button" class="btn btn-secondary"
-        >Contattaci</a
-      >
-    </div>
 
     <div class="container">
-      <div class="row">
-        {% for roll in rolls%}
-        <div class="col-sm">
-          <div class="card" style="width: 18rem">
-            <img src="{{roll.image.url}}" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{{roll.name}} Roll</h5>
-              <p class="card-text">€{{roll.price}}</p>
-              <a href="#" class="btn btn-primary">Acquista</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Chiedici tutto ciò che vuoi... (tranne l'ingradiente segreto)</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"></textarea>
       </div>
     </div>
 
